@@ -6,15 +6,27 @@
     android:layout_height="match_parent"
     android:background="@drawable/kn"
     >
-    <TextView
-        android:id="@+id/text_login"
-        android:textColor="@color/white"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="注册"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:background="@null"/>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:background="@null"/>
+        <TextView
+            android:id="@+id/text_login"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="注册"
+            android:textSize="30sp"
+            android:layout_marginLeft="70dp"
+            android:background="@null"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,5 +1,6 @@
 package com.example.kj.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     private  TextView  text_email,text_name,text_login,text_wei,text_q,
             text_email2;
     private RadioGroup r_sex,r_boy,r_girl;
-    private Button btn_submit;
+    private Button btn_submit,btn_return;
     private CheckBox sing,dance,run;
     private String name,email,paw,sex,hobbys;
     @Override
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         text_name=findViewById(R.id.text_name);
         text_email2=findViewById(R.id.text_paw);
         btn_submit=findViewById(R.id.btn_submit);
+        btn_return=findViewById(R.id.btn_return);
+
         r_sex=findViewById(R.id.r_sex);
         run=findViewById(R.id.run);
         sing=findViewById(R.id.sing);
@@ -53,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         text_q.setOnClickListener(this);
         text_wei.setOnClickListener(this);
         btn_submit.setOnClickListener(this);
+        btn_return.setOnClickListener(this);
+
         hobbys=new String();
 
 
@@ -104,7 +109,11 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
                             "\n\r"+"已提交",Toast.LENGTH_SHORT).show();
                 }
                 break;
-
+            case R.id.btn_return:
+                Intent it=new Intent();
+                it.setClass(MainActivity.this,sumbit.class);
+                MainActivity.this.startActivity(it);
+                break;
         }
     }
 
